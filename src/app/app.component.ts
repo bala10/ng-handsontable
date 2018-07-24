@@ -3,8 +3,8 @@ import * as Handsontable from 'handsontable-pro';
 
 function titleRenderer(instance, td, row, col, prop, value, cellProperties) {
   Handsontable.renderers.TextRenderer.apply(this, arguments);
-  Handsontable.dom.fastInnerHTML(td, '<h3>' + value +'</h3>');
-  td.style.textAlign = this.alignText;
+  Handsontable.dom.fastInnerHTML(td, '<h3>' + value +'('+ instance.alignText +')'+'</h3>');
+  td.style.textAlign = instance.alignText;
 }
 @Component({
   selector: 'app-root',
